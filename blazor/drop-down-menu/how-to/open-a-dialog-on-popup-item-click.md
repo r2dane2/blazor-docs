@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by handling dialog open in [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) event of the Dropdown Menu.
 
-In the following example, Dialog will open while selecting `Other Folder...` item.
+In the following example, Dialog will open while selecting `Update` item.
 
 ```cshtml
 
@@ -42,14 +42,14 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
     private void click(object args)
     {
-        DialogObj.Hide();
+        DialogObj.HideASync();
     }
 
     private void select(MenuEventArgs args)
     {
         if (args.Item.Text == "Update")
         {
-            DialogObj.Show();
+            DialogObj.ShowAsync();
         }
     }
 }
